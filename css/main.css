@@ -1,0 +1,318 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+*{
+    outline: 1px solid red;
+}
+:root{
+    --swiper-theme-color:#096A2E;
+    /* --swiper-pagination-bullet-width: 15px;
+    --swiper-pagination-bullet-height: 15px; */
+}
+
+.wrap{
+    width: 100%;
+    max-width: 1450px;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+}
+
+
+.pd5{
+    padding: 5px;
+}
+.pd10{
+    padding: 10px;
+}
+
+.gap5{
+    gap: 5px;
+}
+.gap10{
+    gap: 10px;
+}
+
+/* 보더 옵션css */
+.card--border{
+    border: 3px solid#096A2E;
+}
+/* 정렬옵션css */
+.align--cc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.align--lc{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.txtal-l{
+    text-align: left;
+}
+.txtal-r{
+    text-align: right;
+}
+.txtal-c{
+    text-align: center;
+}
+/* 섹션css */
+.section{
+    width: 100%;
+    max-width:1450px;
+    padding: 10px;
+    /* margin-top: 10px; */
+    /* background-color: #C9F8CB; */
+    
+}
+.section--title{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom:10px;
+    border-bottom: 4px solid #096A2E;
+}
+
+
+
+/* 폰트css */
+.font-bold{
+    font-weight: bold;
+}
+.font-xxl{
+    font-size: 1.875em; 
+    /* 30px */
+}
+.font-xl{
+    font-size: 1.5rem;
+    /* 24px */
+}
+.font-lg{
+    font-size: 1.250rem;
+    /* 20px */
+}
+.font-m{
+    font-size: 1rem;
+    /* 16px */
+}
+.font-sm{
+    font-size: 0.875rem;
+    /* 14px */
+}
+.font-xsm{
+    font-size: 0.750rem;
+    /* 12px */
+}
+.font-green{
+    color: #C9F8CB;
+}
+.font-darkgreen{
+    color: #096A2E;
+}
+.font-lightgreen{
+    color: #D8FFC8;
+}
+.font-blue{
+    color: #80c1ff;
+}
+.font-darkblue{
+    color: #004280;
+}
+.font-lightblue{
+    color: #cce6ff;
+}
+.font-white{
+    color: #FFF;
+}
+.font-black{
+    color: #000;
+}
+
+/* 백그라운드 컬러 css */
+.background-white{
+    background-color: #FFF ;
+}
+.background-darkgreen{
+    background-color: #096A2E;
+}
+.background-green{
+    background-color: #C9F8CB;
+}
+.background-lightgreen{
+    background-color: #D8FFC8;
+}
+.background-blue{background-color: #80c1ff;}
+.background-lightblue{background-color: #cce6ff;}
+.background-darkblue{background-color: #004280;}
+
+/* 플렉스박스 설정css */
+.flexbox{display: flex;}
+.flexbox-r{flex-direction: row;}
+.flexbox-c{flex-direction: column;}
+
+.flexbox-wrap{flex-wrap: wrap;}
+.flexbox-nw{flex-wrap: nowrap;}
+
+.flexbox-jsc{justify-content: center;}
+.flexbox-js{justify-content: flex-start;}
+.flexbox-je{justify-content: flex-end;}
+.flexbox-jsb{justify-content: space-between;}
+.flexbox-jsa{justify-content: space-around;}
+.flexbox-jse{justify-content: space-evenly;}
+
+.flexbox-as{align-items:flex-start;}
+.flexbox-ac{align-items:center;}
+.flexbox-ae{align-items:flex-end;}
+
+
+/* 버튼css */
+.btn{
+    display: flex;
+    background: none;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    /* border-radius: 5px; */
+}
+.btn--xl{
+    width: 100%;
+    max-width: 200px;
+    height: 50px;
+}
+.btn--medium{
+    width: 50px;
+    height: 50px;
+}
+.btn--lg{
+    width: 120px;
+    height: 20px;
+}
+.btn--sm{ 
+    width: 30px;
+    height: 30px;
+}
+.btn--xsm{
+    width: 20px;
+    height: 20px;
+}
+.btn--login{
+    flex-basis: 80px;
+    flex-grow: 1;
+    height: 25px;
+    background-color: #C9F8CB;
+    padding: 10px;
+    border: 0.5px solid #096A2E;
+}
+.btn--login:hover{
+    background-color: #a5f3a9;
+}
+.btn--subscript{
+    background-color: #096A2E;
+    color: #FFF;
+}
+.btn--subscript:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+.btn--detail{
+    border-bottom: 3px solid transparent;
+}
+.btn--detail:hover{
+    border-bottom: 3px solid #096A2E;
+    opacity: 0.8;
+}
+.btn--slide{
+    background: none;
+    border: none;
+    border-radius: 0;
+    border-bottom: 3px solid #096A2E;
+}
+.btn--slide:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.btn--plus:hover{
+    cursor: pointer;
+    color: #a5f3a9;
+}
+.btn--open{
+    background-color: #096A2E;
+}
+.btn--open:hover{
+    cursor: pointer;
+    background-color: #a5f3a9;
+}
+.btn--top{
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+}
+.btn--top:hover{
+    opacity: 0.8;
+}
+.btn--tab{
+    max-width: fit-content;
+    padding: 0 10px;
+    height: 30px;
+    border-radius: 10px 10px 0 0;
+}
+.btn--search{
+    width: 100%;
+    max-width: 80px;
+    height: 25px;
+    border: 1px solid #cce6ff;
+}
+.btn--search:hover{
+    background-color: #cce6ff;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/* 추후focus 이벤트 설정 */
+.btn--middle{
+    height: 1px;
+    border-bottom: 10px solid #096A2E;
+    border-radius:5px;
+}
+.btn--middle:hover{
+    cursor: pointer;
+}
+/* 버튼박스css */
+.box--btn-r{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.box--btn-c{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+ /* admin css */
+
+
+
+/* 미디어기능 사용필요 maxwidth만설정해 
+pc환경에서는 아래로 내려가지않게끔 설정필요 */
+.section--admin__index{
+    width: 100%;
+    max-width:700px;
+}
+.box--command{
+    width: 100%;
+}
+.box--order{
+    width: 100%;
+}

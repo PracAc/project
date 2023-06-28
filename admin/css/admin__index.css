@@ -1,0 +1,291 @@
+@charset "utf-8";
+
+/* 미디어기능 사용필요 maxwidth만설정해 
+pc환경에서는 아래로 내려가지않게끔 설정필요 */
+.container--section__admin{
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.section--admin__index {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    padding: 10px;
+    gap: 10px;
+    border: 1px solid #004280;
+}
+h1 {
+    padding: 10px 10px 10px 5px;
+    border-bottom: 2px solid #80c1ff;
+}
+.section--admin__index > a {
+    padding: 5px;
+}
+.sub__title--admin{
+    max-width: fit-content;
+    padding: 5px;
+    background-color: #80c1ff;
+    color: #fff;
+    border: 1px solid #004280;
+}
+/* 버튼 */
+.btn--admin__detail{
+    border: 1px solid #004280;
+    padding: 5px;
+}
+.btn--admin__detail:hover{
+    opacity: 0.8;
+}
+
+.btn--renew{
+    background-color: #80c1ff;
+    border: 1px solid #004280;
+    color: #fff;
+    padding: 3px;
+}
+.btn--renew:hover{
+    opacity: 0.8;
+}
+
+/* 구독현황섹션 */
+.box--inquire{
+    gap: 10px;
+}
+.count--inquire {
+    padding: 5px;
+}
+.count--inquire > span {
+    padding: 0 3px;
+}
+.box--admin__subscript {
+    width: 100%;
+    height: 100%;
+    gap: 10px;
+}
+.card--admin__subscript {
+    width: 100%;
+    max-width: calc(97.25%/3);
+    height: auto;
+    min-height: 250px;
+    /* padding: 10px; */
+    gap: 10px;
+    text-align: center;
+    align-self: stretch;
+    border: 1px solid #80c1ff;
+}
+
+.card--admin__subscript > h2 {
+    padding: 5px;
+}
+.content--admin__subscript {
+    height: 100%;
+}
+.content--admin__subscript > span {
+    padding: 5px;
+}
+.compose--subscript {
+    height: 100%;
+    padding: 5px;
+    gap: 5px;
+}
+
+
+/* 상품현황섹션 */
+.tb--admin__product {
+    width: 100%;
+    /* min-width: fit-content; */
+    min-height: 250px;
+    max-height: 400px;
+    overflow: scroll;
+    border: 1px solid #004280;
+}
+
+.tbh--admin__product {
+    width: 100%;
+    border-bottom: 1px solid #004280;
+}
+.tbh--admin__product > span {
+    width: 100%;
+    min-width: 200px;
+    padding: 5px;
+    text-align: center;
+    border-right: 1px solid #004280;
+}
+.tbb--admin__product {
+    width: 100%;
+}
+.tbb--admin__product > span {
+    width: 100%;
+    min-width: 200px;
+    padding: 5px;
+    text-align: center;
+    border-right: 1px solid #cce6ff;
+    border-bottom: 1px solid #cce6ff;
+}
+
+
+/* 발주/배송현황 */
+.group--delivery {
+    height: 100%;
+    min-height: 300px;
+    max-height: 700px;
+    gap: 5px;
+}
+.title--renew{
+    padding: 10px 10px 10px 5px;
+    border-bottom: 2px solid #80c1ff;
+}
+/* 발주 */
+.box--command {
+    width: 100%;
+    max-width: 400px;
+    padding: 5px;
+    gap: 5px;
+    overflow: hidden;
+    
+}
+    /* 발주버튼 */
+    .box--command > a {
+        padding: 5px;
+    }
+    .box--command > a:nth-of-type(1){
+        gap: 5px;
+        max-width: fit-content;
+        max-height: fit-content;
+        border: 1px solid #004280;
+    }
+    .box--command > a:nth-of-type(1):hover{
+        opacity: 0/7;
+    }
+
+.tb--admin__command {
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+    border: 1px solid #004280;
+}
+
+.tbh--admin__command > span {
+    width: 100%;
+    min-width: 120px;
+    padding: 5px;
+    text-align: center;
+    border-right: 1px solid #004280;
+    border-bottom: 1px solid #004280;
+}
+.tbb--admin__command > span {
+    width: 100%;
+    min-width: 120px;
+    padding: 5px;
+    text-align: center;
+    border-right: 1px solid #cce6ff;
+    border-bottom: 1px solid #cce6ff;
+}
+/* 배송 */
+.box--order {
+    width: 100%;
+    max-width: 400px;
+    padding: 5px;
+    overflow: hidden;
+    gap: 5px;
+}
+
+.box--order > a {
+    padding: 5px;
+}
+    /* 배송버튼 */
+    .box--order > a:nth-of-type(1){
+        gap: 5px;
+        max-width: fit-content;
+        max-height: fit-content;
+        border: 1px solid #004280;
+    }
+    .box--order > a:nth-of-type(1):hover{
+        opacity: 0.7;
+    }
+
+.tb--admin__order {
+    width: 100%;
+    /* min-width: fit-content; */
+    height: 100%;
+    overflow: scroll;
+    border: 1px solid #004280;
+}
+.tbh--admin__order > span {
+    width: 100%;
+    min-width: 120px;
+    padding: 5px;
+    text-align: center;
+    border-right: 1px solid #004280;
+    border-bottom: 1px solid #004280;
+}
+.tbb--admin__order > span {
+    width: 100%;
+    min-width: 120px;
+    padding: 5px;
+    text-align: center;
+    border-right: 1px solid #cce6ff;
+    border-bottom: 1px solid #cce6ff;
+}
+
+
+
+/* 문의 */
+.box--admin__qns {
+    width: 100%;
+}
+
+.container--admin__qns {
+    position: relative;
+    height: 100%;
+    min-height: 300px;
+    max-height: 700px;
+    clear: both;
+    overflow: hidden;
+}
+
+.menu--admin__qns {
+    float: left;
+}
+.menu--admin__qns input[type="radio"] {
+    display: none;
+}
+.menu--admin__qns input[type="radio"]:checked ~ label + .content--admin__qns {
+    background: #fff;
+    z-index: 1;
+}
+
+.menu--admin__qns > label {
+    position: relative;
+    padding: 10px;
+    cursor: pointer;
+    background: #cce6ff;
+    border: 1px solid #004280;
+    border-radius: 15px 15px 0 0;
+}
+.menu--admin__qns > label:hover{
+    opacity: 0.7;
+}
+.menu--admin__qns > input[type="radio"]:checked ~ label,
+.menu--admin__qns > input[type="radio"]:checked ~ label:hover
+{
+    background-color: #80c1ff;
+    cursor:default;
+    opacity: 1;
+}
+
+.content--admin__qns {
+    position: absolute;
+    width: 100%;
+    gap: 5px;
+    top: 34px;
+    left: 0;
+    bottom: 0;
+    overflow: auto;
+    border: 1px solid #80c1ff;
+    /* border-top: 0; */
+}
+.content--admin__qns span{
+    padding: 10px;
+    border-bottom: 1px solid #80c1ff;
+}

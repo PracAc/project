@@ -1,0 +1,49 @@
+@charset "utf-8";
+.wrap--admin{
+    gap: 30px;
+}
+.inner--admin{
+    gap: 20px;
+}
+.inner--admin > h1 {
+    padding: 5px;
+    border-bottom: 2px solid #004280;
+}
+input[type="file"]{
+    display: none;
+}
+.regform--subscript{
+    gap: 20px;
+}
+.regform--subscript > div{
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #cce6ff;
+}
+.regform--subscript > div:last-child{
+    border: 0;
+}
+
+.regform--subscript input[type="text"]{
+    width: 100%;
+    max-width: 300px;
+}
+.regform--subscript input[type="radio"]{
+    display: none;
+}
+.selectBox select{
+    width: 100%;
+    min-width: 120px;
+}
+.reg__box--prod{
+    padding: 5px;
+}
+.chk--prod{
+    padding: 5px;
+    border: 1px solid #cce6ff;
+}
+.descrip--subs > textarea{
+    width: 100%;
+    height: 400px;
+    resize: none;
+}

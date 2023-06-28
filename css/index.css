@@ -1,0 +1,171 @@
+.section--subscript{
+    order: 0;
+}
+.section--slide{
+    order: 1;
+}
+.section--product{
+    order: 2;
+}
+.section--benefit{
+    order: 3;
+}
+.section--appeal{
+    order: 4;
+}
+.section--question{
+    order: 5;
+}
+
+/* 슬라이드 섹션css */
+.container--slide{
+    width: 100%;
+    min-height: 450px;
+}
+.slide--img__box{
+    width: 100%;
+    height: 100%;
+}
+.slide--img__box > .swiper-slide > img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide--menu{
+    width: 100%;
+    min-width: 200px;
+    max-width:fit-content;
+    height: auto;
+}
+.slide--direction{
+    background-color: #C9F8CB;
+    opacity: 0.7;
+}
+
+/* 상품설명 섹션css */
+.section:nth-of-type(4) > h1{
+    text-align: center;
+}
+.content--product{
+    padding: 10px;
+    gap: 20px;
+    width: 100%;
+    overflow: hidden;
+}
+.content--product > h2 {
+    width: fit-content;
+    border: 1px solid #C9F8CB;
+    padding: 10px;
+}
+.item--product{
+    gap: 10px;
+   
+}
+.card--product{
+    width: 100%;
+    max-width: 240px;
+    height: 300px;
+}
+.card--product:hover{
+    box-shadow:2px 2px 5px #096A2E;
+}
+.product--img{
+    width: 100%;
+    height: 100%;
+}
+.product--txt{
+    width: 100%;
+    text-align: center;
+    opacity: 0.85 ;
+    padding: 5px;
+    background-color: #f2f2f2;
+}
+
+/* 장점 섹션css */
+
+.section:nth-of-type(5){
+    gap: 10px;
+}
+.card--advantage{
+    gap: 10px;
+}
+.advantage--left{
+    width: 100%;
+    height: 100%;
+    max-width: 250px;
+    min-height: 200px;
+}
+.advantage--left > .advantage--txt{
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+.advantage--right{
+    width: 100%;
+    gap: 10px;
+}
+.advantage--right > .advantage--txt{
+    width: 100%;
+    padding: 5px;
+}
+.advantage--right > .advantage--txt::before{
+    content: "\2022";
+    width: 5px;
+    height: 5px;
+    padding-right: 2px;
+}
+
+/* 어플+구독버튼 섹션css */
+.section:nth-of-type(6){
+    height: 100%;
+    max-height: 450px;
+}
+.section:nth-of-type(6) > div{
+    flex-grow: 1;
+}
+.appeal--img{
+    width: 100%;
+    max-width: 400px;
+    max-height: 250px;
+    align-self: stretch;
+}
+.appeal--box{
+    height: 100%;
+    width: 100%;
+    min-height: 250px;
+    gap: 10px;
+}
+.appeal--txt{
+    width: 100%;
+    padding: 5px;
+    display: inherit;
+    align-items: center;
+}
+
+/* 질문 섹션css */
+.section:nth-of-type(7){
+    gap: 10px;
+    padding-bottom: 20px;
+}
+
+.card--question{
+    width: 100%;
+}
+.question--box{
+    width: 100%;
+    display: inherit;
+    align-items: center;
+    border-bottom: 3px solid #096A2E;  
+}
+.question--txt{
+    width: 100%;
+    padding: 10px;
+    
+}
+.answer--box{
+    width: 100%;
+    height: 220px;
+    border-bottom: 3px solid #096A2E;  
+}

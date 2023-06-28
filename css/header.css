@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+/* 헤더파츠 */
+.wrap--header{
+    top: 0;
+    position: sticky;
+    background-color: #D8FFC8;
+    z-index: 10;
+}
+.advertise--txt{
+    text-align: center;
+    padding: 0.313rem 0;
+    background-color: #096A2E;
+    color: #FFF;
+}
+
+.navi--header{
+    gap: 10px;
+    padding: 10px 0;
+}
+
+/* 로고css */
+.logo{
+    width: 100%;
+    max-width: 200px;
+}
+.logo > a {
+    width: 100%;
+    height: 100%;
+}
+.logo > a > img {
+    width: 100%;
+    max-width: 200px;
+    height: 100px;
+    object-fit: fill;
+}
+
+/* 네비css */
+.nav--menu{
+    width: 100%;
+    gap: 20px;
+}
+.menu--main{
+    flex-basis: 100px;
+    flex-grow: 1;
+    min-width: fit-content;
+    max-width: 100px;
+    text-align: center;
+    padding: 10px 0;
+
+    border-bottom: 3px solid transparent;
+}
+.menu--main:hover{
+    border-bottom: 3px solid #096A2E;
+    opacity: 0.8;
+}
+
+/* 로그인버튼그룹css */
+.box--login{
+    width: 100%;
+    max-width: fit-content;
+    gap: 10px;
+}
+.box--login > span, .box--login > a{
+    min-width: fit-content;
+}
+.user_name{
+    padding: 0 5px;
+}

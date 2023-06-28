@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>subscript_regist</title>
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <link rel="stylesheet" href="/admin/css/admin__common.css">
+    <link rel="stylesheet" href="/admin/css/admin_sidenav.css">
+    <link rel="stylesheet" href="/admin/css/subscript_reg.css">
+</head>
+<body>
+    <div class="wrap--admin flexbox flexbox-r">
+        <!-- 관리자nav -->
+        <div class="wrap--aside flexbox flexbox-c background-darkblue font-white" id="sidenav"></div>
+        <!-- 메인폼영역 -->
+        <div class="inner--admin flexbox flexbox-c">
+            <h1 class="font-xl">구독&nbsp;등록</h1>
+            <form action="#" class="regform--subscript flexbox flexbox-c">
+                <div class="flexbox flexbox-r flexbox-ac necessary--reg">
+                    <span class="title--reg background-blue font-white">구독기간&nbsp;설정</span>
+                    <input type="radio" name="subscript_date" class="btn--search" id="subsdate1">
+                    <label for="subsdate1" class="btn btn--search">1개월</label>
+                    <input type="radio" name="subscript_date" class="btn--search" id="subsdate2">
+                    <label for="subsdate2" class="btn btn--search">3개월</label>
+                    <input type="radio" name="subscript_date" class="btn--search" id="subsdate3">
+                    <label for="subsdate3" class="btn btn--search">6개월</label>
+                </div>
+                <div class="box--admin__search box--btn-r necessary--reg">
+                    <span class="title--reg background-blue font-white">구독분류</span>
+                    <input type="radio" name="subs_type" class="btn--search" id="subs_type1">
+                    <label for="subs_type1" class="btn btn--search">text</label>
+                    <input type="radio" name="subs_type" class="btn--search" id="subs_type2">
+                    <label for="subs_type2" class="btn btn--search">text</label>
+                    <input type="radio" name="subs_type" class="btn--search" id="subs_type3">
+                    <label for="subs_type3" class="btn btn--search">text</label>
+                </div>
+                <div class="flexbox flexbox-ac necessary--reg">
+                    <label for="subs_name" class="title--reg background-blue font-white">구독이름</label>
+                    <input type="text" id="subs_name">
+                </div>
+                <div class="flexbox flexbox-ac necessary--reg">
+                    <label for="subs_code" class="title--reg background-blue font-white">구독코드</label>
+                    <input type="text" id="subs_code">
+                </div>
+                <div class="flexbox flexbox-ac necessary--reg">
+                    <label for="subs_price" class="title--reg background-blue font-white">결제금액</label>
+                    <input type="text" id="subs_price">
+                </div>
+                <div class="flexbox necessary--reg">
+                    <span class="align--cc title--reg background-blue font-white">메인이미지</span>
+                    <input type="text" class="file--upload" value="선택된 파일 없음" placeholder="선택된 파일 없음" readonly>
+                    <label for="subs_mainImg" class="btn btn--choice btn--inReg">파일찾기</label>
+                    <input type="file" id="subs_mainImg" class="choiced__img">
+                </div>
+                <div class="flexbox">
+                    <span class="align--cc title--reg background-blue font-white">서브이미지</span>
+                    <input type="text" class="file--upload" value="선택된 파일 없음" placeholder="선택된 파일 없음" readonly>
+                    <label for="subs_subImg" class="btn btn--choice btn--inReg">파일찾기</label>
+                    <input type="file" id="subs_subImg" class="choiced__img">
+                </div>
+                <div class="flexbox flexbox-c">
+                    <div class="flexbox flexbox-wrap gap10">
+                        <div class="flexbox flexbox-ac gap10">
+                            <span class="title--reg background-blue font-white">구성품&nbsp;셀렉트</span>
+                            <div class="selectBox" >
+                                <select class="font-m" name="prod_type" id="prod_type">
+                                    <option value="all">전체</option>
+                                    <option value="1">text</option>
+                                    <option value="2">text</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="flexbox flexbox-ac gap10">
+                            <label for="prod_search" class="title--reg background-blue font-white">상품검색</label>
+                            <input type="text" id="prod_search" list="prod_search_list" placeholder="상품을 입력해주세요.">
+                            <datalist id="prod_search_list">
+                                <option value="당근">당근</option>
+                                <option value="양파">양파</option>
+                                <option value="대파">대파</option>
+                            </datalist>
+                            <button type="button" class="btn btn--add_subs_prod btn--inReg">추가</button>
+                            <button type="button" class="btn btn--del btn--del_subs_prod">제거</button>
+                        </div>
+                    </div>
+                    <div class="reg__box--prod necessary--reg flexbox flexbox-r flexbox-ac flexbox-wrap gap10">
+                        <div class="chk--prod flexbox flexbox-ac background-darkblue font-white">
+                            <input type="checkbox">
+                            <div><span>상품명</span><span>(원산지)</span></div>
+                        </div>
+                    </div>
+                    <div class="descrip--subs flexbox gap10">
+                        <label for="subs_descrip" class="title--reg background-blue font-white">상세설명</label>
+                        <textarea name="subs_descrip" id="subs_descrip"></textarea>
+                    </div>
+                </div>
+                <div class="flexbox flexbox-jsc">
+                    <button class="btn btn--reg__admin background-blue font-white">등록하기</button>
+                </div>
+            </form>
+        </div>
+    </div>
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="/admin/js/amdin_side.js"></script>
+<script>
+    // file 경로 확인 커스텀
+    let btn_choice = $('.choiced__img');
+    let choiced_file = $('.file--upload')
+
+    btn_choice.on('change', function() {
+        let selected_file = $(this).siblings(choiced_file);
+        let file = $(this).val();
+        selected_file.val(file);
+    });
+
+
+
+    let del_prod = $('.btn--del_subs_prod');
+    let add_prod = $('.btn--add_subs_prod');
+    let prod = $('#prod_search');
+    let prod_box = $('.reg__box--prod');
+    let lsit_prod = $('#prod_search_list').options
+
+    // div생성 (추후 유효성검사시 option값만넣을수 있게 추가예정.)
+    function AddProd(){
+        
+        if(prod.val() !== ""){
+            let box_type = document.createElement('div');
+            let create_prod_box = '';
+            create_prod_box +=  '<div class="chk--prod flexbox flexbox-ac background-darkblue font-white">';
+            create_prod_box +=  '<input type="checkbox"/><div><span>'+ prod.val() +'</span><span>(원산지)</span></div></div>';
+
+            prod_box.append(create_prod_box);
+        };
+    };
+    add_prod.on('click',AddProd);
+
+    // 체크div 제거
+    function DelProd(){
+        let card_prod = $('.chk--prod');
+        let chk_delete = card_prod.children('input[type="checkbox"]:checked');
+
+        chk_delete.parent(card_prod).remove();
+        
+    };
+    del_prod.on('click',DelProd);
+</script>
+</body>
+</html>

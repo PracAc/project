@@ -1,0 +1,35 @@
+@charset "utf-8";
+.wrap--aside{
+    height: 100%;
+}
+.wrap--sidenav{
+    width: 100%;
+    position: fixed;
+    max-width: fit-content;
+    left: -92px;
+    top: 400px;
+    z-index: 20;
+    gap: 2px;
+}
+.sidemenu--box, .sidebtn--box{
+    flex-grow: 1;
+}
+.side--menu{
+    border: 1px solid #096A2E;
+    gap: 5px;
+}
+.side--main{
+    padding: 5px;
+    border-bottom: 3px solid transparent;
+}
+.side--main:hover{
+border-bottom: 3px solid #096A2E;
+opacity: 0.8;
+}
+.sidebtn--box{
+    gap: 10px;
+}
+/* 스크립트용 css */
+.side--on{
+    left: 0px;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin_CheckLog</title>
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <link rel="stylesheet" href="/admin/css/admin__common.css">
+    <link rel="stylesheet" href="/admin/css/admin_sidenav.css">
+    <link rel="stylesheet" href="/admin/css/admin__table.css">
+</head>
+<body>
+    <div class="wrap--admin flexbox flexbox-r">
+        <!-- 관리자nav -->
+        <div class="wrap--aside flexbox flexbox-c background-darkblue" id="sidenav"></div>
+        <!-- 조회/수정 메인 -->
+        <div class="inner--admin flexbox flexbox-c">
+            <h1 class="subscript__title font-lg">접속로그&nbsp;관리</h1>
+            <form class="box--search flexbox flexbox-c">
+                <div class="group--box__btns flexbox flexbox-r flexbox-jsb flexbox-wrap">
+                    <div class="box--admin__search box--btn-r">
+                        <span>브라우저</span>
+                        <input type="radio" name="log_browser" class="btn--search" id="log_browser1">
+                        <label for="log_browser1" class="btn btn--search">text</label>
+                        <input type="radio" name="log_browser" class="btn--search" id="log_browser2">
+                        <label for="log_browser2" class="btn btn--search">text</label>
+                        <input type="radio" name="log_browser" class="btn--search" id="log_browser3">
+                        <label for="log_browser3" class="btn btn--search">text</label>
+                    </div>
+                    <div class="box--admin__search box--btn-r">
+                        <span >OS</span>
+                        <input type="radio" name="log_device" class="btn--search" id="log_device1">
+                        <label for="log_device1" class="btn btn--search">text</label>
+                        <input type="radio" name="log_device" class="btn--search" id="log_device2">
+                        <label for="log_device2" class="btn btn--search">text</label>
+                        <input type="radio" name="log_device" class="btn--search" id="log_device3">
+                        <label for="log_device3" class="btn btn--search">text</label>
+                    </div>
+                    <div class="box--admin__search box--btn-r">
+                        <span>날짜</span>
+                        <input id="chk_start" type="date">&#126;
+                        <input id="chk_end" type="date">
+                    </div>
+                </div>
+                <div class="search--detail__box flexbox">
+                    <select class="select--detail font-m" name="select--detail">
+                        <option value="">전체</option>
+                        <option value="">상품코드</option>
+                        <option value="">상품이름</option>
+                        <option value="">업체명</option>
+                    </select>
+                    <input type="text" class="search--write">
+                </div>
+                <div class="search--check flexbox flexbox-r flexbox-jsc">
+                    <button type="submit" class="btn btn--lg btn--chk">search</button>
+                    <button type="reset" class="btn btn--lg btn--chk">reset</button>
+                </div>
+            </form>
+            <!-- 오름차순 설정 -->
+            <div class="box--rank flexbox flexbox-r flexbox-jsb">
+                <div>조회
+                    <span>0</span>건
+                </div>
+                <div class="box--rank__select flexbox flexbox-ac">
+                    <select class="select--detail font-m">
+                        <option value="">20</option>
+                        <option value="">30</option>
+                        <option value="">40</option>
+                        <option value="">50</option>
+                    </select>
+                    <select class="select--detail font-m">
+                        <option value="">text</option>
+                        <option value="">text</option>
+                        <option value="">text</option>
+                    </select>
+                </div>
+            </div>
+            <!-- 버튼모음(체크박스클릭시 전체설정가능하게) -->
+            <div class="box--tb__btns flexbox flexbox-r">
+                <button class="btn btn--del">delete</button>
+            </div>
+            <!-- 표시용 테이블 -->
+            <div class="tb--chk flexbox flexbox-c tb-admin__scroll">
+                <div class="tbh--chk flexbox flexbox-r">
+                    <input type="checkbox" class="All_chkb">
+                    <span>유저이름</span>
+                    <span>이메일</span>
+                    <span>브라우저</span>
+                    <span>OS</span>
+                    <span>최종접속시각</span>
+                </div>
+                <div class="tbb--chk flexbox flexbox-r">
+                    <input type="checkbox">
+                    <span>유저이름</span>
+                    <span>이메일</span>
+                    <span>브라우저</span>
+                    <span>OS</span>
+                    <span>최종접속시각</span>
+                </div>
+                <div class="tbb--chk flexbox flexbox-r">
+                    <input type="checkbox">
+                    <span>유저이름</span>
+                    <span>이메일</span>
+                    <span>브라우저</span>
+                    <span>OS</span>
+                    <span>최종접속시각</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="/admin/js/amdin_side.js"></script>
+<script src="/admin/js/admin_Chkall.js"></script>
+<script>
+let dateElement = document.getElementById('chk_end');
+        let date = new Date().toISOString().slice(0, 10);
+        dateElement.value = date;
+        dateElement.setAttribute("max", date);
+    console.log(date);
+</script>
+</body>
+</html>

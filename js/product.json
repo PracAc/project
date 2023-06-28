@@ -1,0 +1,74 @@
+{
+    "script" : [
+        {
+            "script_name" :"script1",
+            "product":[
+                {
+                    "producID" : "1",
+                    "name" : "carrot",
+                    "stock" : 30,
+                    "description" : [
+                      "this",
+                      "is",
+                      "carrot"
+                    ]
+                  },
+                  {
+                    "producID" : "2",
+                    "name" : "onion",
+                    "stock" : 15,
+                    "description" : [
+                      "this",
+                      "is",
+                      "onion"
+                    ]
+                  },
+                  {
+                    "producID" : "3",
+                    "name" : "potato",
+                    "stock" : 48,
+                    "description" : [
+                      "this",
+                      "is",
+                      "potato"
+                    ]
+                  }
+            ]
+        },
+        {
+            "script_name" :"script2",
+            "product":[
+                {
+                    "producID" : "1",
+                    "name" : "carrot1",
+                    "stock" : 30,
+                    "description" : [
+                      "this",
+                      "is",
+                      "carrot"
+                    ]
+                  },
+                  {
+                    "producID" : "2",
+                    "name" : "onion2",
+                    "stock" : 15,
+                    "description" : [
+                      "this",
+                      "is",
+                      "onion"
+                    ]
+                  },
+                  {
+                    "producID" : "3",
+                    "name" : "potato3",
+                    "stock" : 48,
+                    "description" : [
+                      "this",
+                      "is",
+                      "potato"
+                    ]
+                  }
+            ]
+        }
+    ]
+  }

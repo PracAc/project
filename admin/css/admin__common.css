@@ -1,0 +1,119 @@
+@charset "utf-8";
+
+.wrap--admin{
+    width: 100%;
+    height: 100%;
+    min-height: 1400px;
+    /* 임시 높이 지정 */
+}
+
+.inner--admin {
+    width: 100%;
+    padding: 10px;
+}
+
+.container--section__admin{
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+/* 스크롤옵션 */
+.tb-admin__scroll::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+.tb-admin__scroll::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+.tb-admin__scroll::-webkit-scrollbar-thumb {
+    background-color: #cce6ff;
+}
+
+/* 버튼css */
+.btn--search{
+    width: 100%;
+    min-width: 80px;
+    height: 25px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #cce6ff;
+}
+.btn--search:hover{
+    background-color: #cce6ff;
+    cursor: pointer;
+    opacity: 0.8;
+}
+.btn--search:checked + label{
+    background-color: #cce6ff;
+}
+.btn--tb__chk{
+    background-color: #cce6ff;
+    border: 1px solid #004280;
+}
+.btn--tb__chk:hover{
+    cursor: pointer;
+    border: 1px solid transparent;
+    background-color: #80c1ff;
+}
+/* 버튼css */
+.search--check{
+    gap: 5px;
+}
+.btn--chk{
+    padding: 20px;
+    background-color: #cce6ff;
+    border: 1px solid #004280;
+}
+
+.btn--chk:hover{
+    cursor: pointer;
+    border: 1px solid transparent;
+    background-color: #80c1ff;
+}
+.btn--del{
+    width: 100%;
+    min-width: fit-content;
+    max-width: 60px;
+    padding: 5px;
+    background-color: #f29b9b;
+    border: 1px solid #f26f6f;
+}
+.btn--del:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+.btn--inReg{
+    width: 100%;
+    min-width: fit-content;
+    max-width: 60px;
+    padding: 5px;
+    border: 1px solid #80c1ff;
+    background-color: #cce6ff;
+}
+.btn--inReg:hover{
+    cursor: pointer;
+    background-color: #80c1ff;
+    opacity: 0.7;
+}
+.btn--reg__admin{
+    padding: 10px;
+    border: 1px solid #004280;
+    background-color: #80c1ff;
+}
+.btn--reg__admin:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+
+/* 등록폼 css */
+.title--reg{
+    width: 100%;
+    height: fit-content;
+    min-width: 120px;
+    max-width: fit-content;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #004280;
+
+}

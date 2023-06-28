@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin__subscript</title>
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <link rel="stylesheet" href="/admin/css/admin__common.css">
+    <link rel="stylesheet" href="/admin/css/admin_sidenav.css">
+    <link rel="stylesheet" href="/admin/css/admin__table.css">
+</head>
+
+<body>
+    <div class="wrap--admin flexbox flexbox-r">
+        <!-- 관리자nav -->
+        <div class="wrap--aside flexbox flexbox-c background-darkblue" id="sidenav"></div>
+        <!-- 조회/수정 메인 -->
+        <div class="inner--admin flexbox flexbox-c">
+            <!-- 검색영역 -->
+            <h1 class="subscript__title font-lg">구독&nbsp;조회&#47;수정</h1>
+            <form class="box--search flexbox flexbox-c">
+                <div class="group--box__btns flexbox flexbox-r flexbox-wrap">
+                    <div class="box--admin__search box--btn-r">
+                        <span>구독분류</span>
+                        <input type="radio" name="subs_type" class="btn--search" id="subs_type1">
+                        <label for="subs_type1" class="btn btn--search">text</label>
+                        <input type="radio" name="subs_type" class="btn--search" id="subs_type2">
+                        <label for="subs_type2" class="btn btn--search">text</label>
+                        <input type="radio" name="subs_type" class="btn--search" id="subs_type3">
+                        <label for="subs_type3" class="btn btn--search">text</label>
+                    </div>
+                    <div class="box--admin__search box--btn-r">
+                        <span>구독운영상태</span>
+                        <input type="radio" name="subscript_manage" class="btn--search" id="manage1">
+                        <label for="manage1" class="btn btn--search">text</label>
+                        <input type="radio" name="subscript_manage" class="btn--search" id="manage2">
+                        <label for="manage2" class="btn btn--search">text</label>
+                        <input type="radio" name="subscript_manage" class="btn--search" id="manage3">
+                        <label for="manage3" class="btn btn--search">text</label>
+                    </div>
+                </div>
+                <div class="group--box__btns flexbox flexbox-r">
+                    <div class="box--admin__search box--btn-r">
+                        <span>구독기간</span>
+                        <input type="radio" name="subscript_date" class="btn--search" id="subsdate1">
+                        <label for="subsdate1" class="btn btn--search">1개월</label>
+                        <input type="radio" name="subscript_date" class="btn--search" id="subsdate2">
+                        <label for="subsdate2" class="btn btn--search">3개월</label>
+                        <input type="radio" name="subscript_date" class="btn--search" id="subsdate3">
+                        <label for="subsdate3" class="btn btn--search">6개월</label>
+                    </div>
+                </div>
+                <div class="search--detail__box flexbox">
+                    <select class="select--detail font-m" name="select--detail">
+                        <option value="">전체</option>
+                        <option value="">구독ID</option>
+                        <option value="">구독이름</option>
+                        <option value="">구성품</option>
+                    </select>
+                    <input type="text" class="search--write">
+                </div>
+                <div class="search--check flexbox flexbox-r flexbox-jsc">
+                    <button type="submit" class="btn btn--lg btn--chk">search</button>
+                    <button type="reset" class="btn btn--lg btn--chk">reset</button>
+                </div>
+            </form>
+            <!-- 오름차순 설정 -->
+            <div class="box--rank flexbox flexbox-r flexbox-jsb">
+                <div>조회
+                    <span>0</span>건
+                </div>
+                <div class="box--rank__select flexbox flexbox-ac">
+                    <select class="select--detail font-m">
+                        <option value="">10</option>
+                        <option value="">20</option>
+                        <option value="">30</option>
+                    </select>
+                    <select class="select--detail font-m">
+                        <option value="">text</option>
+                        <option value="">text</option>
+                        <option value="">text</option>
+                    </select>
+                </div>
+            </div>
+            <!-- 버튼모음(체크박스클릭시 전체설정가능하게) -->
+            <div class="box--tb__btns flexbox flexbox-r">
+                <button class="btn btn--del">delete</button>
+            </div>
+            <!-- 표시용 테이블 -->
+            <div class="tb--chk flexbox flexbox-c tb-admin__scroll">
+                <div class="tbh--chk flexbox flexbox-r">
+                    <input type="checkbox" class="All_chkb">
+                    <span class="btn">check&#47;modify</span>
+                    <span>구독기간</span>
+                    <span>구독ID</span>
+                    <span>구독종류</span>
+                    <span>구독번호</span>
+                    <span>구성품</span>
+                    <span>메인이미지</span>
+                    <span>서브이미지</span>
+                    <span>가격</span>
+                </div>
+                <div class="tbb--chk flexbox flexbox-r">
+                    <input type="checkbox">
+                    <div class="flexbox flexbox-r flexbox-jse">
+                        <button class="btn btn--tb__chk font-xsm">check</button>
+                        <button class="btn btn--tb__chk font-xsm">modify</button>
+                    </div>
+                    <span>구독기간</span>
+                    <span>구독ID</span>
+                    <span>구독종류</span>
+                    <span>구독번호</span>
+                    <span>구성품</span>
+                    <span>메인이미지</span> 
+                    <span>서브이미지</span>
+                    <span>가격</span>
+                </div>
+                <div class="tbb--chk flexbox flexbox-r">
+                    <input type="checkbox">
+                    <div class="flexbox flexbox-r flexbox-jse">
+                        <button class="btn btn--tb__chk font-xsm">check</button>
+                        <button class="btn btn--tb__chk font-xsm">modify</button>
+                    </div>
+                    <span>구독기간</span>
+                    <span>구독ID</span>
+                    <span>구독종류</span>
+                    <span>구독번호</span>
+                    <span>구성품</span>
+                    <span>메인이미지</span>
+                    <span>서브이미지</span>
+                    <span>가격</span>
+                </div>
+            </div>
+        </div>
+    </div>
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="/admin/js/amdin_side.js"></script>
+<script src="/admin/js/admin_Chkall.js"></script>
+<script>
+
+   
+</script>
+</body>
+
+</html>
