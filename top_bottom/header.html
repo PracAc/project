@@ -13,10 +13,77 @@
     <div class="box--login flexbox flexbox-r flexbox-ac">
         <span class="user_name font-bold" >name</span>
         <span class="align--cc material-symbols-outlined background-darkgreen font-lightgreen">Person</span>
-        <a href="/admin/admin_product/admin_product.html">adminPage</a>
+        <a href="/admin/admin_product/admin_product.html"  target="_blank">adminPage</a>
         <!-- <a href="#">login</a> -->
-        <button class="btn btn--login font-darkgreen font-bold">login</button>
+        <button class="btn--logPop btn btn--login font-darkgreen font-bold">login</button>
         <button class="btn btn--login font-darkgreen font-bold">regist</button>
-        <button class="btn btn--login font-darkgreen font-bold">logout</button>
+        <button class="btn--lgout btn btn--login font-darkgreen font-bold">logout</button>
     </div>
 </nav>
+<div class="wrap--loginpopup">
+    <form>
+        <div id="naverIdLogin"></div>
+        <span class="btn--close btn btn--del align--cc">닫기</span>
+    </form>
+</div>
+
+<script>
+    let lgPopBtn = document.querySelector('.btn--logPop')
+    let lgPopClose = document.querySelector('.btn--close')
+    
+    lgPopBtn.addEventListener('click',function (){
+        let lgPopup = document.querySelector('.wrap--loginpopup');
+        lgPopup.classList.add('on');
+    })
+    lgPopClose.addEventListener('click',() =>{
+        let lgPopup = document.querySelector('.wrap--loginpopup');
+        lgPopup.classList.remove('on');
+    })
+  
+    const naverLogin = new naver.LoginWithNaverId(
+     {
+      clientId: "sG_14o2i0pfwTeGUBLkK",
+      callbackUrl: "http://127.0.0.1:5500/index.html",
+      loginButton: {color: "green", type: 2, height: 40},
+      // isPopup : true
+      }
+     );
+  
+  
+      naverLogin.init();
+      naverLogin.getLoginStatus(function (status) {
+        if (status) {
+            const Nname=naverLogin.user.getName();
+            const Nage = naverLogin.user.getAge();
+            const Nbirthday=naverLogin.user.getBirthday();
+            const Nemail=naverLogin.user.getEmail();
+  
+            if(Nname===null||Nname===undefined ){
+              alert("별명이 필요합니다. 정보제공을 동의해주세요.");
+              naverLogin.reprompt();
+              return ;
+           }else{
+            setLoginStatus();
+           }
+      }
+      });
+      console.log(naverLogin);
+  
+      function setLoginStatus(){
+  
+        let user_name = document.querySelector('.user_name');
+        user_name.textContent=`${naverLogin.user.name}님`;
+  
+        let btnLgout=document.querySelector('.btn--lgout');
+        btnLgout.classList.add('on');
+  
+        btnLgout.addEventListener('click',(e)=>{
+            naverLogin.logout('http://nid.naver.com/nidlogin.logout');
+            location.replace("http://127.0.0.1:5500/index.html");
+            btnLgout.classList.remove('on');
+        })
+        let lgPopBtn = document.querySelector('.btn--logPop')
+        lgPopBtn.style.display = 'none';
+      }
+  
+    </script>

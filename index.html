@@ -14,6 +14,31 @@
     <link rel="stylesheet" href="/css/index.css">
     <link rel="stylesheet" href="/css/sidenav.css">
     <link rel="stylesheet" href="/css/subscript_sec.css">
+    <style>
+.wrap--loginpopup{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
+    position: fixed;
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 10px;
+    gap: 10px;
+}
+.wrap--loginpopup.on{
+    display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.btn--lgout{
+    display: none;
+}
+.btn--lgout.on{
+    display: flex;
+}
+    </style>
 </head>
 <body class="background-lightgreen">
     <!-- 헤더 -->
@@ -68,5 +93,7 @@
     <script src="/js/footer.js"></script>
     <script src="/js/paypopup.js"></script>
     <script src="/js/scriptcard.js"></script>
+    <script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js"></script>
+
 </body>
 </html>  

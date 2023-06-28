@@ -8,10 +8,10 @@ request.send();
 request.onload = function () {
     let btxt = request.response;
     let b = JSON.parse(btxt);
-    showHeroes(b);
+    showScript(b);
 };
 
-function showHeroes(a) {
+function showScript(a) {
     let scripts = a['script'];
     let scriptTitle = document.querySelectorAll('.subscript--txt__box > h2');
     let scriptBox = document.querySelectorAll('.subscript--txt__box');

@@ -272,7 +272,18 @@
     cursor: pointer;
     opacity: 0.8;
 }
-
+.btn--del{
+    width: 100%;
+    min-width: fit-content;
+    max-width: 60px;
+    padding: 5px;
+    background-color: #f29b9b;
+    border: 1px solid #f26f6f;
+}
+.btn--del:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
 /* 추후focus 이벤트 설정 */
 .btn--middle{
     height: 1px;
