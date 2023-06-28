@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prototype</title>
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/sidenav.css">
+    <link rel="stylesheet" href="/css/subscript_sec.css">
+</head>
+<body class="background-lightgreen">
+    <!-- 헤더 -->
+    <header id="header" class="wrap--header flexbox flexbox-c flexbox-jsc"></header>
+    <!-- 메인섹션 -->
+    <div class="wrap">
+        <!-- 구독간단홍보 섹션 -->
+        <div class="section section--subscript flexbox flexbox-c">
+            <h1 class="font-xxl section--title font-darkgreen">subscript</h1>
+            <div class="subscript--box flexbox flexbox-r flexbox-jsb">
+                <div class="card--subscript flexbox flexbox-c flexbox-ac card--border background-green">
+                    <div class="subscript--txt__box flexbox flexbox-ac flexbox-c">
+                        <h2 class="font-xxl font-darkgreen">.</h2>
+                    </div>
+                    <div class="flexbox box--btn-r flexbox-jsc">
+                        <a class="btn btn--xl btn--detail font-lg font-darkgreen font-bold" href="#">detail</a>
+                        <button class="btn btn--xl btn--subscript font-lg font-bold" value="subscript2" onclick="pay()">subscript</button>
+                    </div>
+                </div>
+                <div class="card--subscript flexbox flexbox-c flexbox-ac card--border background-green">
+                    <div class="subscript--txt__box flexbox flexbox-ac flexbox-c">
+                        <h2 class="font-xxl font-darkgreen">.</h2>
+                    </div>
+                    <div class="flexbox box--btn-r flexbox-jsc">
+                        <a class="btn btn--xl btn--detail font-lg font-darkgreen font-bold" href="#">detail</a>
+                        <button class="btn btn--xl btn--subscript font-lg font-bold" value="subscript3" onclick="pay()">subscript</button>
+                    </div>
+                </div>
+            </div>
+        </div> 
+        <!-- 간단질문 섹션 -->
+        <div class="section section--question flexbox flexbox-c">
+            <h1 class="font-xxl section--title font-darkgreen">Question</h1>
+            <div class="card--question flexbox flexbox-c">
+                <div class="question--box flexbox flexbox-r flexbox-ac font-darkgreen">
+                    <div class="question--txt font-xxl font-bold">text</div>
+                    <span class="btn--medium btn--plus material-symbols-outlined align--cc font-xxl font-bold">add_box</span>
+                </div>
+                <div class="answer--box background-green">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 푸터 -->
+    <footer id="footer" class="wrap--foot flexbox flexbox-c background-darkgreen"></footer>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/footer.js"></script>
+    <script src="/js/paypopup.js"></script>
+    <script src="/js/scriptcard.js"></script>
+</body>
+</html>  
