@@ -1,3 +1,3 @@
 $(function(){
-    $('#sidenav').load('/admin/asidenav.html');
+    $('#sidenav').load('/project/admin/asidenav.html');
 });

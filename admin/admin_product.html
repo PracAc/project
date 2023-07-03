@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin_product</title>
 
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/admin/css/admin__common.css">
-    <link rel="stylesheet" href="/admin/css/admin_sidenav.css">
-    <link rel="stylesheet" href="/admin/css/admin__table.css">
-    <link rel="stylesheet" href="/admin/css/admin.css">
+    <link rel="stylesheet" href="/project/css/reset.css">
+    <link rel="stylesheet" href="/project/css/main.css">
+    <link rel="stylesheet" href="/project/css/header.css">
+    <link rel="stylesheet" href="/project/css/footer.css">
+    <link rel="stylesheet" href="/project/admin/css/admin__common.css">
+    <link rel="stylesheet" href="/project/admin/css/admin_sidenav.css">
+    <link rel="stylesheet" href="/project/admin/css/admin__table.css">
+    <link rel="stylesheet" href="/project/admin/css/admin.css">
 </head>
 <body>
     <div class="wrap--admin flexbox flexbox-r">
@@ -32,21 +32,21 @@
                 </div>
                 <div class="box--logoopt gap10">
                     <div class="card--logo flexbox flexbox-c">
-                        <img src="/img/logo/logo1.png" alt="#">
+                        <img src="/project/img/logo/logo1.png" alt="#">
                         <div class="box--btn flexbox flexbox-r flexbox-jsc gap10">
                             <button type="button" class="btn--use_logo btn btn--inReg">사용하기</button>
                             <button type="button" class="btn--del_logo btn btn--del">제거</button>
                         </div>
                     </div>
                     <div class="card--logo flexbox flexbox-c">
-                        <img src="/img/logo/logo3.png" alt="#">
+                        <img src="/project/img/logo/logo3.png" alt="#">
                         <div class="box--btn flexbox flexbox-r flexbox-jsc gap10">
                             <button type="button" class="btn--use_logo btn btn--inReg">사용중</button>
                             <button type="button" class="btn--del_logo btn btn--del">제거</button>
                         </div>
                     </div>
                     <div class="card--logo flexbox flexbox-c">
-                        <img src="/img/logo/logo3.png" alt="#">
+                        <img src="/project/img/logo/logo3.png" alt="#">
                         <div class="box--btn flexbox flexbox-r flexbox-jsc gap10">
                             <button type="button" class="btn--use_logo btn btn--inReg">사용하기</button>
                             <button type="button" class="btn--del_logo btn btn--del">제거</button>
@@ -199,7 +199,7 @@
             logoUrl.val(btn_choice.val());
 
             let file_url = logoUrl.val().split('\\');
-            let file_name = `/img/logo/${file_url[file_url.length - 1]}`
+            let file_name = `/project/img/logo/${file_url[file_url.length - 1]}`
             console.log(file_name);
             
             $('.wrap--logoPop').removeClass('popon');
