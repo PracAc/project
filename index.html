@@ -6,38 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>prototype</title>
 
-    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/project/css/reset.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="/css/index.css">
-    <link rel="stylesheet" href="/css/sidenav.css">
-    <link rel="stylesheet" href="/css/subscript_sec.css">
+    <link rel="stylesheet" href="/project/css/main.css">
+    <link rel="stylesheet" href="/project/css/header.css">
+    <link rel="stylesheet" href="/project/css/footer.css">
+    <link rel="stylesheet" href="/project/css/index.css">
+    <link rel="stylesheet" href="/project/css/sidenav.css">
+    <link rel="stylesheet" href="/project/css/subscript_sec.css">
     <style>
-.wrap--loginpopup{
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 500px;
-    position: fixed;
-    background-color: #fff;
-    border: 1px solid #000;
-    padding: 10px;
-    gap: 10px;
-}
-.wrap--loginpopup.on{
-    display: flex;
-    left: 50%;
-    transform: translateX(-50%);
-}
-.btn--lgout{
-    display: none;
-}
-.btn--lgout.on{
-    display: flex;
-}
+
+
     </style>
 </head>
 <body class="background-lightgreen">
@@ -45,30 +24,41 @@
     <header id="header" class="wrap--header flexbox flexbox-c flexbox-jsc"></header>
     <!-- 메인섹션 -->
     <div class="wrap">
+        <div class="section flexbox flexbox-r flexbox-jsc gap10">
+            <span>판매갯수</span>
+            <span class="sellCount">0</span>
+        </div>
         <!-- 구독간단홍보 섹션 -->
         <div class="section section--subscript flexbox flexbox-c">
             <h1 class="font-xxl section--title font-darkgreen">subscript</h1>
             <div class="subscript--box flexbox flexbox-r flexbox-jsb">
                 <div class="card--subscript flexbox flexbox-c flexbox-ac card--border background-green">
                     <div class="subscript--txt__box flexbox flexbox-ac flexbox-c">
-                        <h2 class="font-xxl font-darkgreen">.</h2>
+                        <h2 class="font-xxl font-darkgreen subs--title">.</h2>
                     </div>
                     <div class="flexbox box--btn-r flexbox-jsc">
                         <a class="btn btn--xl btn--detail font-lg font-darkgreen font-bold" href="#">detail</a>
-                        <button class="btn btn--xl btn--subscript font-lg font-bold" value="subscript2" onclick="pay()">subscript</button>
+                        <button class="btn btn--xl btn--subscript font-lg font-bold">subscript</button>
                     </div>
                 </div>
                 <div class="card--subscript flexbox flexbox-c flexbox-ac card--border background-green">
                     <div class="subscript--txt__box flexbox flexbox-ac flexbox-c">
-                        <h2 class="font-xxl font-darkgreen">.</h2>
+                        <h2 class="font-xxl font-darkgreen subs--title">.</h2>
                     </div>
                     <div class="flexbox box--btn-r flexbox-jsc">
                         <a class="btn btn--xl btn--detail font-lg font-darkgreen font-bold" href="#">detail</a>
-                        <button class="btn btn--xl btn--subscript font-lg font-bold" value="subscript3" onclick="pay()">subscript</button>
+                        <button class="btn btn--xl btn--subscript font-lg font-bold">subscript</button>
                     </div>
                 </div>
             </div>
         </div> 
+        <div class="subPop">
+            <span class="subPop--descript"></span>
+            <div class="flexbox flexbox-r flexbox-jsb">
+                <button class="btn--buy btn btn--lg align--cc">구매하기</button>
+                <span class="btn--close btn btn--lg btn--del align--cc">닫기</span>
+            </div>
+        </div>
         <!-- 간단질문 섹션 -->
         <div class="section section--question flexbox flexbox-c">
             <h1 class="font-xxl section--title font-darkgreen">Question</h1>
@@ -87,13 +77,61 @@
     <!-- 푸터 -->
     <footer id="footer" class="wrap--foot flexbox flexbox-c background-darkgreen"></footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.4.1/swiper-bundle.min.js"></script>
-    <script src="/js/header.js"></script>
-    <script src="/js/footer.js"></script>
-    <script src="/js/paypopup.js"></script>
-    <script src="/js/scriptcard.js"></script>
+    <script src="/project/js/header.js"></script>
+    <script src="/project/js/footer.js"></script>
+    <script src="/project/js/scriptcard.js"></script>
     <script src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js"></script>
 
+    <script>
+        let scriptBtn = document.querySelectorAll('.btn--subscript');
+        let sellC = document.querySelector('.sellCount')
+        sellC.textContent =localStorage.getItem('Count')
+        console.log(localStorage.getItem('Count'))
+
+        for(i=0; i < scriptBtn.length;i++){
+            let scriptBox = document.querySelectorAll('.card--subscript')
+            let subTitle = document.querySelectorAll('.subs--title')
+            let popTitle = subTitle[i]
+            let subTxt = document.querySelectorAll('.subscript--txt__box')
+            let popTxt = subTxt[i]
+            scriptBtn[i].addEventListener('click',()=>{
+                // if(user_name.value == 'name'){
+                //     alert('로그인이 필요합니다.')
+                // }else{
+                let subPop = document.querySelector('.subPop')
+                subPop.classList.add('on')
+                document.querySelector('.subPop--descript').innerHTML =popTxt.innerHTML;
+                console.log(popTitle.textContent);
+                let closeBtn = document.querySelector('.subPop .btn--close')
+
+                closeBtn.addEventListener('click',()=>{
+                    subPop.classList.remove('on')
+                })
+                let payOk = document.querySelector('.btn--buy')
+                payOk.addEventListener('click',function(){
+                    
+                    let Confirm = confirm('구매하시겠습니까?')
+                    if(Confirm == true){
+                        let localCount;
+                        if(localStorage.getItem('Count')===null){
+                            localCount = 0;
+                        } else{
+                            localCount = JSON.parse(localStorage.getItem('Count'))
+                        }
+                        localCount = localCount+1;
+                        localStorage.setItem('Count',JSON.stringify(localCount))
+                        sellC.textContent =localStorage.getItem('Count')
+                        subPop.classList.remove('on');
+                    } else{
+                        alert('결제 실패하셨습니다.');
+                    }
+                })
+            // }
+            })
+            
+        }
+    </script>
 </body>
 </html>  

@@ -1,3 +1,3 @@
 $(function(){
-    $('#header').load('/top_bottom/header.html');
+    $('#header').load('/project/top_bottom/header.html');
 });

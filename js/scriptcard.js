@@ -1,4 +1,4 @@
-let requestURL = '/js/product.json';
+let requestURL = '/project/js/product.json';
 let request = new XMLHttpRequest();
 request.open('GET', requestURL);
 
@@ -8,10 +8,10 @@ request.send();
 request.onload = function () {
     let btxt = request.response;
     let b = JSON.parse(btxt);
-    showScript(b);
+    showsubScript(b);
 };
 
-function showScript(a) {
+function showsubScript(a) {
     let scripts = a['script'];
     let scriptTitle = document.querySelectorAll('.subscript--txt__box > h2');
     let scriptBox = document.querySelectorAll('.subscript--txt__box');
@@ -26,12 +26,13 @@ function showScript(a) {
         let products = scripts[i].product;
         for (let j = 0; j < products.length; j++) {
             let prodBox = document.createElement('div');
+            prodBox
             prodBox.classList.add('subscript--txt', 'font-lg', 'flexbox', 'font-white', 'background-darkgreen', 'flexbox-c');
-            prodBox.textContent = products[j].name + ':';
+            prodBox.textContent = `상품명 : ${products[j].name}`;
             let descriptions = products[j].description;
             for (let n = 0; n < descriptions.length; n++) {
                 let prodBoxInner = document.createElement('div');
-                prodBoxInner.textContent = descriptions[n];
+                prodBoxInner.innerHTML = `<div>${descriptions[n]}</div></br>`
                 prodBox.appendChild(prodBoxInner);
             }
             prodBox.textContent += products[j].stock;

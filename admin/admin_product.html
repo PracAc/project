@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin_product</title>
+
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/admin/css/admin__common.css">
+    <link rel="stylesheet" href="/admin/css/admin_sidenav.css">
+    <link rel="stylesheet" href="/admin/css/admin__table.css">
+    <link rel="stylesheet" href="/admin/css/admin.css">
+</head>
+<body>
+    <div class="wrap--admin flexbox flexbox-r">
+        <!-- 관리자nav -->
+        <div class="wrap--aside flexbox flexbox-c background-darkblue" id="sidenav"></div>
+        <!-- 조회/수정 메인 -->
+        <div class="inner--admin flexbox flexbox-c">
+            
+            <h1 class="subscript__title font-lg">상품&nbsp;조회&#47;수정</h1>
+            <form class="box--search flexbox flexbox-c">
+                <!-- logo관리 -->
+            <div class="flexbox flexbox-c">
+                <div class="box--mainopt__title flexbox flexbox-r flexbox-jsb flexbox-ac pd5">
+                    <h2 class="title--reg background-blue font-lg font-white">로고설정</h2>
+                    <button type="button" class="btn--add_logo btn btn--inReg font-m">추가</button>
+                </div>
+                <div class="box--logoopt gap10">
+                    <div class="card--logo flexbox flexbox-c">
+                        <img src="/img/logo/logo1.png" alt="#">
+                        <div class="box--btn flexbox flexbox-r flexbox-jsc gap10">
+                            <button type="button" class="btn--use_logo btn btn--inReg">사용하기</button>
+                            <button type="button" class="btn--del_logo btn btn--del">제거</button>
+                        </div>
+                    </div>
+                    <div class="card--logo flexbox flexbox-c">
+                        <img src="/img/logo/logo3.png" alt="#">
+                        <div class="box--btn flexbox flexbox-r flexbox-jsc gap10">
+                            <button type="button" class="btn--use_logo btn btn--inReg">사용중</button>
+                            <button type="button" class="btn--del_logo btn btn--del">제거</button>
+                        </div>
+                    </div>
+                    <div class="card--logo flexbox flexbox-c">
+                        <img src="/img/logo/logo3.png" alt="#">
+                        <div class="box--btn flexbox flexbox-r flexbox-jsc gap10">
+                            <button type="button" class="btn--use_logo btn btn--inReg">사용하기</button>
+                            <button type="button" class="btn--del_logo btn btn--del">제거</button>
+                        </div>
+                    </div>
+                    <div class="wrap--logoPop">
+                        <div class="flexbox flexbox-je">
+                            <span class="align--cc title--reg background-blue font-white">로고이미지</span>
+                            <input type="text" class="file--upload" value="선택된 파일 없음" placeholder="선택된 파일 없음" readonly>
+                            <label for="logo_Img" class="btn btn--choice btn--inReg">파일찾기</label>
+                            <input type="file" id="logo_Img" class="choiced__img">
+                        </div>
+                        <div class="flexbox flexbox-r flexbox-jsc">
+                            <button type="button" class="btn--insert_logo btn btn--inReg">완료</button>
+                            <span class="btn--close btn btn--del align--cc">닫기</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="group--box__btns flexbox flexbox-r flexbox-jsb flexbox-wrap">
+                    <div class="box--admin__search box--btn-r">
+                        <span>배송분류</span>
+                        <input type="radio" name="delivery_type" class="btn--search" id="delivery_type1">
+                        <label for="delivery_type1" class="btn btn--search">text</label>
+                        <input type="radio" name="delivery_type" class="btn--search" id="delivery_type2">
+                        <label for="delivery_type2" class="btn btn--search">text</label>
+                        <input type="radio" name="delivery_type" class="btn--search" id="delivery_type3">
+                        <label for="delivery_type3" class="btn btn--search">text</label>
+                    </div>
+                    <div class="box--admin__search box--btn-r">
+                        <span >판매상태</span>
+                        <input type="radio" name="sell_state" class="btn--search" id="sell_state1">
+                        <label for="sell_state1" class="btn btn--search">text</label>
+                        <input type="radio" name="sell_state" class="btn--search" id="sell_state2">
+                        <label for="sell_state2" class="btn btn--search">text</label>
+                        <input type="radio" name="sell_state" class="btn--search" id="sell_state3">
+                        <label for="sell_state3" class="btn btn--search">text</label>
+                    </div>
+                </div>
+                <div class="search--detail__box flexbox">
+                    <select class="select--detail font-m" name="select--detail">
+                        <option value="">전체</option>
+                        <option value="">상품코드</option>
+                        <option value="">상품이름</option>
+                        <option value="">업체명</option>
+                    </select>
+                    <input type="text" class="search--write">
+                </div>
+                <div class="search--check flexbox flexbox-r flexbox-jsc">
+                    <button type="submit" class="btn btn--lg btn--chk">search</button>
+                    <button type="reset" class="btn btn--lg btn--chk">reset</button>
+                </div>
+            </form>
+            <!-- 오름차순 설정 -->
+            <div class="box--rank flexbox flexbox-r flexbox-jsb">
+                <div>조회
+                    <span>0</span>건
+                </div>
+                <div class="box--rank__select flexbox flexbox-ac">
+                    <select class="select--detail font-m">
+                        <option value="">20</option>
+                        <option value="">30</option>
+                        <option value="">40</option>
+                        <option value="">50</option>
+                    </select>
+                    <select class="select--detail font-m">
+                        <option value="">text</option>
+                        <option value="">text</option>
+                        <option value="">text</option>
+                    </select>
+                </div>
+            </div>
+            <!-- 버튼모음(체크박스클릭시 전체설정가능하게) -->
+            <div class="box--tb__btns flexbox flexbox-r">
+                <button class="btn btn--del">delete</button>
+            </div>
+            <!-- 표시용 테이블 -->
+            <div class="tb--chk flexbox flexbox-c tb-admin__scroll">
+                <div class="tbh--chk flexbox flexbox-r">
+                    <input type="checkbox" class="All_chkb">
+                    <span class="btn">check&#47;modify</span>
+                    <span>상품명</span>
+                    <span>상품코드</span>
+                    <span>분류</span>
+                    <span>메인이미지</span>
+                    <span>원산지</span>
+                    <span>권장소비기한</span>
+                    <span>재고</span>
+                </div>
+                <div class="tbb--chk flexbox flexbox-r">
+                    <input type="checkbox">
+                    <div class="flexbox flexbox-r flexbox-jse">
+                        <button class="btn btn--tb__chk font-xsm">check</button>
+                        <button class="btn btn--tb__chk font-xsm">modify</button>
+                    </div>
+                    <span>상품명</span>
+                    <span>상품코드</span>
+                    <span>분류</span>
+                    <span>메인이미지</span>
+                    <span>원산지</span>
+                    <span>권장소비기한</span>
+                    <span>재고</span>
+                </div>
+                <div class="tbb--chk flexbox flexbox-r">
+                    <input type="checkbox">
+                    <div class="flexbox flexbox-r flexbox-jse">
+                        <button class="btn btn--tb__chk font-xsm">check</button>
+                        <button class="btn btn--tb__chk font-xsm">modify</button>
+                    </div>
+                    <span>상품명</span>
+                    <span>상품코드</span>
+                    <span>분류</span>
+                    <span>메인이미지</span>
+                    <span>원산지</span>
+                    <span>권장소비기한</span>
+                    <span>재고</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer id="footer" class="wrap--foot flexbox flexbox-c background-darkgreen"></footer>
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script src="/js/footer.js"></script>
+<script src="/admin/js/amdin_side.js"></script>
+<script src="/admin/js/admin_Chkall.js"></script>
+<script src="/admin/js/filecustom.js"></script>
+<script>
+    $('.btn--add_logo').on('click', function(){
+        $('.wrap--logoPop').addClass('popon')
+        
+    });
+    
+    $('.btn--close').on('click', function(){
+        $('.wrap--logoPop').removeClass('popon')
+    });
+
+</script>
+<script>
+    let insertLogo = $('.btn--insert_logo')
+    
+    function addFileUrl(){
+        let fileChk = /[a-zA-Z]:\\.+\.(jpg|gif|png)/gi;
+        
+        let btn_choice = $('.choiced__img');
+        
+        if(!fileChk.test(btn_choice.val())){
+            alert("경로가 잘못되었습니다.");
+        } else {
+            let logoUrl = $('.file--upload');
+            logoUrl.val(btn_choice.val());
+
+            let file_url = logoUrl.val().split('\\');
+            let file_name = `/img/logo/${file_url[file_url.length - 1]}`
+            console.log(file_name);
+            
+            $('.wrap--logoPop').removeClass('popon');
+
+            let card_type = document.createElement('div');
+            let create_card_logo = '';
+            create_card_logo +=  '<div class="card--logo flexbox flexbox-c">';
+            create_card_logo +=  `<img src="${file_name}" alt="#">`;
+            create_card_logo +=  '<div class="box--btn flexbox flexbox-r flexbox-jsc gap10">';
+            create_card_logo +=  '<button type="button" class="btn--use_logo btn btn--inReg">사용하기</button><button type="button" class="btn--del_logo btn btn--del">제거</button>';
+            create_card_logo +=  '</div></div>'
+                                
+            $('.box--logoopt').append(create_card_logo);
+            $('.btn--del_logo').on('click',NoChk_del);
+        }
+    };
+    insertLogo.on('click',addFileUrl);
+    
+   
+    
+    function NoChk_del(){
+        $(this).parent($('.box--btn')).parent($('.card--logo')).remove();
+    }
+    $('.btn--del_logo').on('click',NoChk_del);
+
+    function change_logo(){
+        let use_logo = $('.btn--use_logo');
+        use_logo.text('사용하기');
+        $(this).text('사용중');
+    }
+    $('.btn--use_logo').on('click',change_logo);
+</script>
+<script>
+  function DelMenu(){
+        let listMenu = $('.menu--list__opt');
+        let chk_delete = listMenu.children('input[type="checkbox"]:checked');
+
+        chk_delete.parent(listMenu).remove();
+    };
+    $('.btn--del_menu').on('click',DelMenu);
+</script>
+</body>
+</html>

@@ -54,7 +54,13 @@
     border-bottom: 3px solid #096A2E;
     opacity: 0.8;
 }
-
+.user_name{
+    background:none;
+    border: none;
+    width: 20%;
+    max-width: fit-content;
+    text-align: right;
+}
 /* 로그인버튼그룹css */
 .box--login{
     width: 100%;
@@ -66,4 +72,10 @@
 }
 .user_name{
     padding: 0 5px;
+}
+.btn--lgout{
+    display: none;
+}
+.btn--lgout.on{
+    display: flex;
 }

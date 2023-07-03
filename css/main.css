@@ -284,13 +284,12 @@
     cursor: pointer;
     opacity: 0.8;
 }
-/* 추후focus 이벤트 설정 */
-.btn--middle{
-    height: 1px;
-    border-bottom: 10px solid #096A2E;
-    border-radius:5px;
+.btn--buy{
+    background-color: #096A2E;
+    color: #FFF;
 }
-.btn--middle:hover{
+.btn--buy:hover{
+    opacity: 0.8;
     cursor: pointer;
 }
 /* 버튼박스css */
